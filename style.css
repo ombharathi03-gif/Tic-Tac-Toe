@@ -1,0 +1,94 @@
+/* General page layout */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #232526, #414345);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Container for the game */
+.container {
+  text-align: center;
+  color: #fff;
+}
+
+/* Title with glowing text-shadow effect */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+}
+
+/* Status display area */
+#status {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: #0f0;
+  text-shadow: 0 0 10px #0f0;
+}
+
+/* 3x3 Grid for Tic Tac Toe */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Each cell of the grid */
+.cell {
+  background: #111;
+  border-radius: 10px;
+  font-size: 2.5em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  transition: 0.2s;
+}
+
+/* Hover effect with glow */
+.cell:hover {
+  background: #222;
+  box-shadow: 0 0 15px #0ff;
+}
+
+/* When game is over, disable clicks */
+.cell.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Glowing X and O effect */
+.cell.X {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+.cell.O {
+  color: #ff0080;
+  text-shadow: 0 0 10px #ff0080, 0 0 20px #ff0080;
+}
+
+/* Reset button */
+#reset {
+  padding: 10px 25px;
+  font-size: 1em;
+  background: #00b894;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#reset:hover {
+  background: #019874;
+}
